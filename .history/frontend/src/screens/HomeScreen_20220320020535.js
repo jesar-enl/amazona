@@ -1,7 +1,7 @@
 import { useEffect, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import logger from 'use-reducer-logger';
+import logger from ''
 // import data from '../data';
 
 const reducer = (state, action) => {
@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 };
 
 export default function HomeScreen() {
-  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
+  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
     error: '',
@@ -41,28 +41,22 @@ export default function HomeScreen() {
     <div>
       <h1>Featured Products</h1>
       <div className="products">
-        {loading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>{error}</div>
-        ) : (
-          products.map((product) => (
-            <div className="product" key={product.slug}>
+        {products.map((product) => (
+          <div className="product" key={product.slug}>
+            <Link to={`/product/${product.slug}`}>
+              <img src={product.image} alt={product.name} />
+            </Link>
+            <div className="product-info">
               <Link to={`/product/${product.slug}`}>
-                <img src={product.image} alt={product.name} />
+                <p>{product.name}</p>
               </Link>
-              <div className="product-info">
-                <Link to={`/product/${product.slug}`}>
-                  <p>{product.name}</p>
-                </Link>
-                <p>
-                  <strong>shs.{product.price}</strong>
-                </p>
-                <button>Add to cart</button>
-              </div>
+              <p>
+                <strong>shs.{product.price}</strong>
+              </p>
+              <button>Add to cart</button>
             </div>
-          ))
-        )}
+          </div>
+        ))}
       </div>
     </div>
   );

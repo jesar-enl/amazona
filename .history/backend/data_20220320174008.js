@@ -79,7 +79,7 @@ const data = {
       description: 'High quality product',
     },
     {
-      _id: '7',
+      _id: '1',
       name: 'Khaki black pant',
       slug: 'khaki-black-pants',
       category: 'Pants',
@@ -92,7 +92,6 @@ const data = {
       description: 'High quality product',
     },
     {
-      _id: '8',
       name: 'Khaki pants',
       slug: 'khaki-pants',
       category: 'Pants',

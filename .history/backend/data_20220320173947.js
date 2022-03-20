@@ -53,7 +53,8 @@ const data = {
       description: 'High quality product',
     },
     {
-      _id: '5',
+      _id: '1',
+
       name: 'Adidas fit pant',
       slug: 'adidas-fit-pant',
       category: 'Pants',
@@ -66,7 +67,6 @@ const data = {
       description: 'High quality product',
     },
     {
-      _id: '6',
       name: 'Jean pant',
       slug: 'jean-pant',
       category: 'Pants',
@@ -79,7 +79,6 @@ const data = {
       description: 'High quality product',
     },
     {
-      _id: '7',
       name: 'Khaki black pant',
       slug: 'khaki-black-pants',
       category: 'Pants',
@@ -92,7 +91,6 @@ const data = {
       description: 'High quality product',
     },
     {
-      _id: '8',
       name: 'Khaki pants',
       slug: 'khaki-pants',
       category: 'Pants',

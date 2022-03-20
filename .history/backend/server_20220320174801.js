@@ -14,8 +14,8 @@ app.get('/api/products/slug/:slug', (req, res) => {
     res.status(404).send({ message: 'Product not found' });
   }
 });
-app.get('/api/products/:id', (req, res) => {
-  const product = data.products.find((x) => x._id === req.params.id);
+app.get('/api/products/slug/:slug', (req, res) => {
+  const product = data.products.find((x) => x.slug === req.params.slug);
   if (product) {
     res.send(product);
   } else {

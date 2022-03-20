@@ -12,7 +12,6 @@ import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { getError } from '../util';
-import { Store } from '../Store';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -50,12 +49,9 @@ export default function ProductScreen() {
     fetchData();
   }, [slug]);
 
-  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { state, dispatch: ctxDispatch } = useContext();
   const addToCartHandler = () => {
-    ctxDispatch({
-      type: 'CART_ADD_ITEM',
-      payload: { ...product, quantity: 1 },
-    });
+    ctxDispatch({type: 'CART_ADD_ITEM', payload: {...product}})
   };
 
   return loading ? (

@@ -7,9 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.site-container {
-  min-height: 100vh;
-}
 
 .products {
   display: flex;
@@ -17,7 +14,7 @@ body {
   justify-content: center;
 }
 main {
-  flex: 1;
+  padding: 1rem;
 }
 
 .product {

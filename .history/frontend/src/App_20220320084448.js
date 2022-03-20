@@ -1,0 +1,30 @@
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div>
+        <header>
+          <Navbar bg="dark" variant="dark">
+            <Container>
+              <LinkContainer><Navbar.Brand></Navbar.Brand>
+              </LinkContainer>
+              
+            </Container>
+          </Navbar>
+          <Link to="/">amazona</Link>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;

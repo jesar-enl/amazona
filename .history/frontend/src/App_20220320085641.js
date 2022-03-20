@@ -8,7 +8,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 function App() {
   return (
     <BrowserRouter>
-      <div className="d-flex flex-column site-container">
+      <div>
         <header>
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -26,7 +26,7 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer className="text-center">&copy; All rights reserved.</footer>
+        
       </div>
     </BrowserRouter>
   );

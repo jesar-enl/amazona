@@ -74,7 +74,7 @@ const data = {
     },
     {
       name: 'Khaki black pant',
-      slug: 'khaki-black-pants',
+      slug: 'khaki-pants',
       category: 'Pants',
       image: '/images/P3.jpg',
       price: 27000,

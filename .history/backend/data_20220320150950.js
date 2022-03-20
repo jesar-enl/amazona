@@ -26,7 +26,7 @@ const data = {
     },
     {
       name: 'Nike Slim Shirt',
-      slug: 'nike-slim-shirts',
+      slug: 'nike-slim-shirt',
       category: 'Shirts',
       image: '/images/S3.jpg',
       price: 30000,
@@ -54,7 +54,7 @@ const data = {
       category: 'Pants',
       image: '/images/P1.jpg',
       price: 16000,
-      countInStock: 0,
+      countInStock: 8,
       brand: 'Puma',
       rating: 2.0,
       numReviews: 13,
@@ -74,7 +74,7 @@ const data = {
     },
     {
       name: 'Khaki black pant',
-      slug: 'khaki-black-pants',
+      slug: 'khaki-pants',
       category: 'Pants',
       image: '/images/P3.jpg',
       price: 27000,

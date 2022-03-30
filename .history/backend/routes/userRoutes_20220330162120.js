@@ -1,0 +1,12 @@
+import express from 'express';
+
+const userRouter = express.Router();
+
+userRouter.post(
+  '/signin',
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findOne({ email: req.body.email });
+  })
+);
+
+export default userRouter;

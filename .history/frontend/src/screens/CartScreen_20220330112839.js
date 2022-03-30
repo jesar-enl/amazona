@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Helmet } from 'react-helmet-async';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MessageBox from '../components/MessageBox';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Store } from '../Store';
@@ -11,7 +11,6 @@ import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 
 const CartScreen = () => {
-  const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
     cart: { cartItems },
@@ -31,12 +30,8 @@ const CartScreen = () => {
   };
 
   const removeItemHandler = (item) => {
-    ctxDispatch({ type: 'CART_REMOVE_ITEM', payload: item });
-  };
-
-  const checkoutHandler = () => {
-    navigate('/signin?redirect=/shipping');
-  };
+      ctxDispatch({type})
+  }
   return (
     <div>
       <Helmet>
@@ -114,7 +109,6 @@ const CartScreen = () => {
                     <Button
                       type="button"
                       variant="primary"
-                      onClick={checkoutHandler}
                       disabled={cartItems.length === 0}
                     >
                       Proceed to Checkout

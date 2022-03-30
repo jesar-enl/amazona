@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Helmet } from 'react-helmet-async';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MessageBox from '../components/MessageBox';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Store } from '../Store';
@@ -11,7 +11,6 @@ import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 
 const CartScreen = () => {
-  const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const {
     cart: { cartItems },
@@ -35,7 +34,7 @@ const CartScreen = () => {
   };
 
   const checkoutHandler = () => {
-    navigate('/signin?redirect=/shipping');
+      navigate('/signin?')
   };
   return (
     <div>

@@ -19,7 +19,6 @@ mongoose
 const app = express();
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
-
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useContext, useEffect, useReducer } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -28,7 +28,7 @@ const reducer = (state, action) => {
 };
 
 export default function ProductScreen() {
-  const navigate = useNavigate();
+  const navigate
   const params = useParams();
   const { slug } = params;
 

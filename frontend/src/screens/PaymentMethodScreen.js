@@ -26,7 +26,7 @@ export default function PaymentMethodScreen() {
     e.preventDefault();
     ctxDispatch({ type: 'SAVE_PAYMENT_METHOD', payload: paymentMethodName });
     localStorage.setItem('paymentMethod', paymentMethodName);
-    navigate('/placeholder');
+    navigate('/placeorder');
   };
   return (
     <div>
@@ -54,6 +54,16 @@ export default function PaymentMethodScreen() {
               label="Stripe"
               value="Stripe"
               checked={paymentMethodName === 'Stripe'}
+              onChange={(e) => setPaymentMethod(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <Form.Check
+              type="radio"
+              id="Cash on delivery"
+              label="Cash on delivery"
+              value="Cash on delivery"
+              checked={paymentMethodName === 'Cash on delivery'}
               onChange={(e) => setPaymentMethod(e.target.value)}
             />
           </div>

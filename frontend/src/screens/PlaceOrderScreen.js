@@ -33,6 +33,7 @@ export default function PlaceOrderScreen() {
   return (
     <div>
       <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
+
       <Helmet>
         <title>Preview Order</title>
       </Helmet>
@@ -96,19 +97,19 @@ export default function PlaceOrderScreen() {
                 <ListGroup.Item>
                   <Row>
                     <Col>Items</Col>
-                    <Col>shs.{cart.itemsPrice.toFixed(2)}</Col>
+                    <Col>shs.{cart.itemsPrice.toFixed(0)}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Shipping</Col>
-                    <Col>shs.{cart.shippingPrice.toFixed(2)}</Col>
+                    <Col>shs.{cart.shippingPrice.toFixed(0)}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
                     <Col>Tax</Col>
-                    <Col>shs.{cart.taxPrice.toFixed(2)}</Col>
+                    <Col>shs.{cart.taxPrice.toFixed(0)}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
@@ -117,7 +118,7 @@ export default function PlaceOrderScreen() {
                       <strong> Order Total</strong>
                     </Col>
                     <Col>
-                      <strong>shs.{cart.totalPrice.toFixed(2)}</strong>
+                      <strong>shs.{cart.totalPrice.toFixed(0)}</strong>
                     </Col>
                   </Row>
                 </ListGroup.Item>
